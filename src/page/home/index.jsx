@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react'
-import Navbar from '../../components/navbar'
-import { Banner1, Banner2, Banner3 } from '../../assets'
+import { useState, useEffect } from "react";
+import Navbar from "../../components/navbar";
+import { Banner1, Banner2, Banner3 } from "../../assets";
 
 function index() {
   const Caroseal = [
@@ -21,28 +21,53 @@ function index() {
 
   return (
     <>
+    <div>
+
       <div
-        className="w-full justify-center h-screen flex relative"
+        className="w-full justify-center   h-screen flex relative"
         style={{
           backgroundImage: `url(${Caroseal[currentIndex].image})`,
           backgroundSize: "cover",
-          filter: 'brightness(0.6) contrast(1.1)',
+          filter: "brightness(0.6) contrast(1.1)",
           backgroundPosition: "center",
-          transition: "background-image 1s ease"
-        }}>
-        <div className='max-w-[1300px]  flex justify-center w-full'>
-          <div className='w-full flex-col gap-[50%]  flex py-5'>
-        <Navbar />
-        <div className='bg-yellow-200 flex justify-center'>
-
-        <h1 className='text-red-500 text-[40px] font-[300]'>Real Editorial Wedding  photography</h1>
-        </div>
+          transition: "background-image 1s ease",
+        }}
+      >
+        <div className="max-w-[1300px] w-full  flex justify-center">
+          <div className="w-full flex-col gap-[50%]  flex py-5">
+            <Navbar />
+            <div className=" p-5 flex justify-center">
+              <h1 className="text-white text-4xl global-font">
+              Real Editorial Wedding  photography
+                            </h1>
+            </div>
           </div>
-        
         </div>
       </div>
+
+      {/* **************section************* */}
+
+
+      <div className="w-full flex justify-center">
+        <div className="max-w-[1300px] w-full bg-amber-200">
+          <div>
+
+          <h1 className="text-[54px] font-[400] global-font" >A MODERN APPROACH  <br /> 
+          TO AN AGE  OLD TRADITION</h1>
+          </div>
+
+
+<div>
+  
+</div>
+
+        </div>
+        <div></div>
+      </div>
+      </div>
+ 
     </>
-  )
+  );
 }
 
-export default index
+export default index;

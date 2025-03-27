@@ -1,1 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
 @import "tailwindcss";
+
+
+.global-font{
+font-family: 'Cinzel';
+}
+
+@font-face {
+    font-family: 'Ivy Mode';
+    src: url('/fonts/IvyMode.woff2') format('woff2'),
+         url('/fonts/IvyMode.woff') format('woff'),
+         url('/fonts/IvyMode.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  

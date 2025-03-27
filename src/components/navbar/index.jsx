@@ -71,7 +71,6 @@ const Index = () => {
             </ul>
           </div>
 
-          {/* Instagram Button - Desktop only */}
           <div className="hidden md:flex justify-center items-center">
             <InstButton
               imgclassName="w-14"
@@ -82,19 +81,14 @@ const Index = () => {
         </div>
       )}
 
-      {/* Full-screen overlay menu - similar to the provided screenshot */}
       {isMenuOpen && (
         <div className="fixed inset-0 z-50 flex flex-row">
-          {/* Left image section - takes 1/3 of screen on mobile */}
           <div className="w-1/3 ">
-            {/* Replace this with your actual image */}
             <div className="h-full w-full bg-cover bg-center bg-no-repeat opacity-70" 
                  style={{ backgroundImage: "url('/path-to-your-wedding-image.jpg')" }}>
             </div>
           </div>
-          
-          {/* Right menu section - takes 2/3 of screen */}
-          <div className="w-2/3 bg-black/40 flex flex-col">
+                    <div className="w-2/3 bg-black/40 flex flex-col">
             <div className="flex justify-end p-4">
               <button
                 onClick={toggleMenu}
