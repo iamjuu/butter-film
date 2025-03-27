@@ -23,7 +23,7 @@ function App() {
   return (
     <>
       <div
-        className="w-full h-screen flex relative"
+        className="w-full justify-center h-screen flex relative"
         style={{
           backgroundImage: `url(${Caroseal[currentIndex].image})`,
           backgroundSize: "cover",
@@ -31,9 +31,8 @@ function App() {
           backgroundPosition: "center",
           transition: "background-image 1s ease"
         }}>
-        <div className='max-w-[1300px] bg-amber-200  flex justify-center w-full'>
-          <div>
-
+        <div className='max-w-[1300px]  flex justify-center w-full'>
+          <div className='w-full py-5'>
         <Navbar />
           </div>
         </div>
