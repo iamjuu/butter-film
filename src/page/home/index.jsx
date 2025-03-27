@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Navbar from "../../components/navbar";
-import { Banner1, Banner2, Banner3 } from "../../assets";
+import { Banner1, Banner2, Banner3, Card1, Card2, Card3 } from "../../assets";
 
 function index() {
   const Caroseal = [
@@ -8,6 +8,13 @@ function index() {
     { id: 2, image: Banner2 },
     { id: 3, image: Banner3 },
   ];
+
+  const Card =[
+    {id:1,image:Card1},
+    {id:2,image:Card2},
+    {id:3,image:Card3}
+
+  ]
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -21,51 +28,57 @@ function index() {
 
   return (
     <>
-    <div>
-
-      <div
-        className="w-full justify-center   h-screen flex relative"
-        style={{
-          backgroundImage: `url(${Caroseal[currentIndex].image})`,
-          backgroundSize: "cover",
-          filter: "brightness(0.6) contrast(1.1)",
-          backgroundPosition: "center",
-          transition: "background-image 1s ease",
-        }}
-      >
-        <div className="max-w-[1300px] w-full  flex justify-center">
-          <div className="w-full flex-col gap-[50%]  flex py-5">
-            <Navbar />
-            <div className=" p-5 flex justify-center">
-              <h1 className="text-white text-4xl global-font">
-              Real Editorial Wedding  photography
-                            </h1>
+      <div>
+        <div
+          className="w-full justify-center   h-screen flex relative"
+          style={{
+            backgroundImage: `url(${Caroseal[currentIndex].image})`,
+            backgroundSize: "cover",
+            filter: "brightness(0.6) contrast(1.1)",
+            backgroundPosition: "center",
+            transition: "background-image 1s ease",
+          }}
+        >
+          <div className="max-w-[1300px] w-full  flex justify-center">
+            <div className="w-full flex-col gap-[50%]  flex py-5">
+              <Navbar />
+              <div className=" p-5 flex justify-center">
+                <h1 className="text-white text-4xl global-font">
+                  Real Editorial Wedding photography
+                </h1>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* **************section************* */}
+        {/* **************section************* */}
 
-
-      <div className="w-full flex justify-center">
-        <div className="max-w-[1300px] w-full bg-amber-200">
-          <div>
-
-          <h1 className="text-[54px] font-[400] global-font" >A MODERN APPROACH  <br /> 
-          TO AN AGE  OLD TRADITION</h1>
+        <div className="w-full flex justify-center bg-amber-50">
+      <div className="max-w-6xl  pt-5 md:pt-30  w-full py-12 px-6">
+        <div className="mb-12 w-full flex justify-center">
+          <div className="w-full md:w-4/5">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-normal global-font text-red-700 tracking-wide leading-tight">
+              A MODERN APPROACH<br />
+              TO AN AGE-OLD TRADITION
+            </h1>
           </div>
-
-
-<div>
-  
-</div>
-
         </div>
-        <div></div>
+
+        <div className="flex justify-center flex-col md:flex-row md:flex-wrap gap-6">
+          {Card.map((item) => (
+            <div key={item.id} className="group relative bg-red-300 overflow-hidden mx-auto md:mx-0">
+              <img 
+                className="w-full max-w-[306px]  md:h-[500px] object-cover transition-transform duration-500 grayscale group-hover:grayscale-0 group-hover:scale-105" 
+                src={item.image} 
+                alt={item.title} 
+              />
+              <div className="absolute inset-0 bg-black/40 bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+          ))}
+        </div>
       </div>
+    </div>
       </div>
- 
     </>
   );
 }
