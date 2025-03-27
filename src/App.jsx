@@ -1,44 +1,25 @@
-import { useState, useEffect } from 'react'
-import './App.css'
-import Navbar from './components/navbar'
-import { Banner1, Banner2, Banner3 } from './assets'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './page/home';
+// import StoryPage from './pages/About';
+// import EnquiryPage from './pages/Services';
+// import AboutPage from './pages/Contact';
+import './App.css';
 
-function App() {
-  const Caroseal = [
-    { id: 1, image: Banner1 },
-    { id: 2, image: Banner2 },
-    { id: 3, image: Banner3 },
-  ];
-
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % Caroseal.length);
-    }, 3000); // Change image every 3 seconds
-
-    return () => clearInterval(interval);
-  }, [Caroseal.length]);
-
+const App = () => {
   return (
-    <>
-      <div
-        className="w-full justify-center h-screen flex relative"
-        style={{
-          backgroundImage: `url(${Caroseal[currentIndex].image})`,
-          backgroundSize: "cover",
-          filter: 'brightness(0.6) contrast(1.1)',
-          backgroundPosition: "center",
-          transition: "background-image 1s ease"
-        }}>
-        <div className='max-w-[1300px]  flex justify-center w-full'>
-          <div className='w-full py-5'>
-        <Navbar />
-          </div>
+    <Router>
+      <div className="app">
+        <div className="content">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            {/* <Route path="/about" element={<StoryPage />} /> */}
+            {/* <Route path="/services" element={<EnquiryPage />} /> */}
+            {/* <Route path="/contact" element={<AboutPage />} /> */}
+          </Routes>
         </div>
       </div>
-    </>
-  )
-}
+    </Router>
+  );
+};
 
-export default App
+export default App;
