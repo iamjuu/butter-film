@@ -82,7 +82,7 @@ const Index = () => {
       )}
 
       {isMenuOpen && (
-        <div className="fixed inset-0 z-50 flex flex-row">
+        <div className="fixed  inset-0 z-50 flex flex-row">
           <div className="w-1/3 ">
             <div className="h-full w-full bg-cover bg-center bg-no-repeat opacity-70" 
                  style={{ backgroundImage: "url('/path-to-your-wedding-image.jpg')" }}>
@@ -100,7 +100,7 @@ const Index = () => {
             </div>
             
             <div className="flex flex-col justify-start items-end pr-12 h-full">
-              <ul className="flex flex-col gap-8 text-white font-medium items-end">
+              <ul className="flex flex-col gap-2 text-white font-medium items-end">
                 <li className="cursor-pointer text-[12px] font-normal hover:underline py-2 transition-all duration-200">
                   HOME
                 </li>
